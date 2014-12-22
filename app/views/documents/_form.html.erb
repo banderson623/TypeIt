@@ -16,8 +16,18 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
   <br />
-  <%= f.label :content %>
-  <%= f.text_area :content %>
+  <%= f.hidden_field :content %>
+
+  <!-- Create the toolbar container -->
+  <div id="toolbar">
+    <button class="ql-bold">Bold</button>
+    <button class="ql-italic">Italic</button>
+  </div>
+
+  <!-- Create the editor container -->
+  <div id="quill-editor">
+    <%= @document.content.html_safe %>
+  </div>
 
 
   <div class="actions">

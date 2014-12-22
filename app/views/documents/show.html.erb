@@ -6,7 +6,8 @@
 <p><strong>Name</strong>: <%= @document.name %></p>
 
 
-<p><strong>Content</strong>: <%= @document.content %></p>
+<p><strong>Content</strong>:</p>
+<%= @document.content.html_safe %>
 
 <%= link_to 'Edit', edit_document_path(@document) %> |
 <%= link_to 'Back', documents_path %>
