@@ -1,4 +1,7 @@
+
 <p id="notice"><%= notice %></p>
+
+<%= render partial: "shared/audio_player", locals: {document:@document} %>
 
 <p><strong>Name</strong>: <%= @document.name %></p>
 

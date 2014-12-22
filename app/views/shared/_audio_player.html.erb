@@ -1,0 +1,7 @@
+<% document ||= Document.new %>
+<% audio ||= document.audio %>
+
+<audio controls>
+    Your browser does not support the <code>audio</code> element.
+    <source src="<%= audio.url %>" type="<%= audio.mime_type %>">
+</audio>

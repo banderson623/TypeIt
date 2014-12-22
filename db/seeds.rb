@@ -15,7 +15,8 @@ d = Document.create(name: "ATP 96",
 d.users << brian
 
 a = Audio.create(name: "ATP 96",
-                 url: "http://traffic.libsyn.com/atpfm/atp96.mp3")
+                 url: "http://traffic.libsyn.com/atpfm/atp96.mp3",
+                 mime_type: "audio/mp3")
 
 d.audio = a
 
