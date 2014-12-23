@@ -9,6 +9,7 @@
       quill.addModule('toolbar', { container: '#toolbar' });
 
       quill.on('text-change', function(delta, source) {
+        console.log("diff", delta);
         $field.val(quill.getHTML());
         // if (source == 'api') {
         //   console.log("An API call triggered this change.");

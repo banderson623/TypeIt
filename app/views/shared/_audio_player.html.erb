@@ -1,7 +1,19 @@
 <% document ||= Document.new %>
 <% audio ||= document.audio %>
 
-<audio controls>
+<audio controls id="audio-player">
     Your browser does not support the <code>audio</code> element.
     <source src="<%= audio.url %>" type="<%= audio.mime_type %>">
 </audio>
+
+<form id="speed-control">
+  <label for="playback-speed">Playback Speed</label>
+  <select id="playback-speed" name="playback-speed">
+    <option value=0.25>25%</option>
+    <option value=0.5>50%</option>
+    <option value=0.75>75%</option>
+    <option selected="selected" value=1>100%</option>
+    <option value=1.25>125%</option>
+  </select>
+</form>
+

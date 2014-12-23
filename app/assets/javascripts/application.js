@@ -15,3 +15,26 @@
 ////= require turbolinks
 //= require_tree .
 //= require quill
+
+
+(function($){
+
+
+  // DOM Ready
+  $(function(){
+    var $speedControl = $("#playback-speed");
+
+    var changeAudioSpeed = function(speed){
+      $audioPlayer.get(0).playbackRate = speed;
+    }
+
+    var $audioPlayer = $("#audio-player");
+    if($speedControl.length && $audioPlayer.length){
+      $speedControl.on('change', function(){
+        var speed = $(this).val();
+        console.log("changed", speed);
+        changeAudioSpeed(speed);
+      });
+    }
+  });
+})(jQuery);
