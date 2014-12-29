@@ -7,9 +7,10 @@
       console.log("initializing things")
       var quill = new Quill('#' + $editor.attr('id'));
       quill.addModule('toolbar', { container: '#toolbar' });
+      quill.addModule('timeSync',{});
 
       quill.on('text-change', function(delta, source) {
-        console.log("diff", delta);
+        // console.log("diff", delta);
         $field.val(quill.getHTML());
         // if (source == 'api') {
         //   console.log("An API call triggered this change.");
